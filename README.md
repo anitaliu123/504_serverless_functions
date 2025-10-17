@@ -11,8 +11,47 @@ The purpose of this assignment is to implement the same HTTP serverless function
     - Centers for Disease Control and Prevention (CDC): https://www.cdc.gov/diabetes/managing/managing-blood-sugar/a1c.html
 
 # Azure 
-- Name the file 
+- Subscription: Azure for Students
+- Resource Group: 504
+- Function name: hba1c-1
+- OS: Linux
+- Runtime Slack: Python 3.12
+- Region: north central us
+- Leave everything else.
+- Endpoint link: https://hba1c-1-hcdmhreya7cmatc8.northcentralus-01.azurewebsites.net/api/hba1c_classifier
+- [video](https://drive.google.com/file/d/16sZkpAfjILc8fJtlTnA7zyGZHuy4BCxE/view?usp=sharing)
 
+## Steps
+- Logged into Azure and made a resource group and named it 504.
+- Used the search bar to locate ```Function App``` and selected create, and then consumption. Made sure all of the followering were selected. 
+    Subscription: Azure for Students 
+    Resource Group: 504 
+    Function name: hba1c-1 
+    OS: Linux 
+    Runtime Slack: Python 3.12 
+    Region: north central us
+- Leave everything else.
+- After the deployment is complete, select "Go to resrouce" and then select create function and HTTP Trigger.
+- Name the function, in this case I named it "hba1c_classifier"
+- I added my code in ```__init___.py``` and click save.
+
+## Testing
+- Click Test/Run in order to open up another screen.
+- I inputted query parameters with hba1c being the name and the value of 6.7 just to test if everything worked. 
+
+![images](azure/images/azure_testing.png)
+
+- You should see the 200 OK and a response code that represents the value and status.
+
+### POST Request
+I ran the code that I placed in the ```__init___.py``` file and used python to run it.
+
+![images](azure/images/azure_vstest.png)
+
+### GET Request
+I was able to copy the url from the ```Get Function URL``` tab in Azure. I then was able to use ```?hba1c=6.7``` or any other value to test and see if everything was executed successfully.
+
+![images](azure/images/azure_get_request.png)
 
 # Google Cloud
 - Named the file hba1c-triage
@@ -21,6 +60,7 @@ The purpose of this assignment is to implement the same HTTP serverless function
 - Allowed for public access
 - Networking, select all
 - Endpoint link: https://hba1c-triage-718737153982.us-central1.run.app
+- [video](https://drive.google.com/file/d/1gR97tq3UK3Acb5N-K6Qs_y_ht9WCuXvi/view?usp=sharing)
 
 ## Steps
 1. Log into Google Cloud
@@ -34,7 +74,7 @@ The purpose of this assignment is to implement the same HTTP serverless function
 
 ## Testing
 
-### Post Request
+### POST Request
 I ran the deployed GCP Cloud Function endpoint directly from VS Code using Python.
 
 ![images](gcp/images/gcp_testing.png)

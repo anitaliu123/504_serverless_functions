@@ -24,12 +24,12 @@ The purpose of this assignment is to implement the same HTTP serverless function
 ## Steps
 - Logged into Azure and made a resource group and named it 504.
 - Used the search bar to locate ```Function App``` and selected create, and then consumption. Made sure all of the followering were selected. 
-    Subscription: Azure for Students 
-    Resource Group: 504 
-    Function name: hba1c-1 
-    OS: Linux 
-    Runtime Slack: Python 3.12 
-    Region: north central us
+    - Subscription: Azure for Students 
+    - Resource Group: 504 
+    - Function name: hba1c-1 
+    - OS: Linux 
+    - Runtime Slack: Python 3.12 
+    - Region: north central us
 - Leave everything else.
 - After the deployment is complete, select "Go to resrouce" and then select create function and HTTP Trigger.
 - Name the function, in this case I named it "hba1c_classifier"

@@ -19,7 +19,7 @@ The purpose of this assignment is to implement the same HTTP serverless function
 - Region: north central us
 - Leave everything else.
 - Endpoint link: https://hba1c-1-hcdmhreya7cmatc8.northcentralus-01.azurewebsites.net/api/hba1c_classifier
-- [video](https://drive.google.com/file/d/16sZkpAfjILc8fJtlTnA7zyGZHuy4BCxE/view?usp=sharing)
+- [Tutorial](https://drive.google.com/file/d/16sZkpAfjILc8fJtlTnA7zyGZHuy4BCxE/view?usp=sharing)
 
 ## Steps
 - Logged into Azure and made a resource group and named it 504.
@@ -60,13 +60,13 @@ I was able to copy the url from the ```Get Function URL``` tab in Azure. I then 
 - Allowed for public access
 - Networking, select all
 - Endpoint link: https://hba1c-triage-718737153982.us-central1.run.app
-- [video](https://drive.google.com/file/d/1gR97tq3UK3Acb5N-K6Qs_y_ht9WCuXvi/view?usp=sharing)
+- [Tutorial](https://drive.google.com/file/d/1gR97tq3UK3Acb5N-K6Qs_y_ht9WCuXvi/view?usp=sharing)
 
 ## Steps
 1. Log into Google Cloud
 2. Searched for Cloud run and then selected "create a service"
 3. I then selected inline editor to create a function
-4. Named the service hba1c-triage and chose the region "us-central1" and selected Python 3.13 for runtime. I selected Allow public access and made billing request based. I then made the maximum number of isntances 1 and changed ingress to All.
+4. Named the service hba1c-triage and chose the region "us-central1" and selected Python 3.13 for runtime. I selected Allow public access and made billing request based. I then made the maximum number of instances to 1 and changed ingress to All.
 5. Click on "create"
 6. Changed the key of the entry point to the "main.py" code in the gcp folder.
 7. Renamed as hba1c-triage and clicked save and deploy to update the new code.
@@ -86,3 +86,5 @@ Using the URL of the end point link, I pasted it into the browser and typed in `
 
 ![images](gcp/images/gcp_get_request.png)
 
+## Comparison
+Google Cloud Platform (GCP) was straightforward to work with, the deployment only required a single gcloud functions deploy command and the endpoint was immediately available. Testing through both the console and Python requests was seamless, and logs were easily viewable through Cloud Logging. In contrast, Microsoft Azure was much harder to work with. The platform required more setup steps (creating a resource group, storage account, and function app), and I ran into several errors during deployment and testing. The routing and authentication settings were confusing, and syncing triggers or restarting the app was often necessary to make updates visible. Overall, Azure felt more complex and error-prone, while GCP offered a smoother and faster workflow.
